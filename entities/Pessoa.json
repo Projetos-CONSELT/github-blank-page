@@ -1,0 +1,123 @@
+{
+  "type": "object",
+  "properties": {
+    "nome": {
+      "type": "string",
+      "title": "Nome"
+    },
+    "cpf": {
+      "type": "string",
+      "title": "CPF"
+    },
+    "whatsapp": {
+      "type": "string",
+      "title": "WhatsApp"
+    },
+    "email": {
+      "type": "string",
+      "title": "E-mail"
+    },
+    "endereco": {
+      "type": "string",
+      "title": "Endere\u00e7o"
+    },
+    "cidade": {
+      "type": "string",
+      "title": "Cidade"
+    },
+    "estado": {
+      "type": "string",
+      "title": "Estado"
+    },
+    "cep": {
+      "type": "string",
+      "title": "CEP"
+    },
+    "papeis": {
+      "type": "array",
+      "title": "Pap\u00e9is",
+      "items": {
+        "type": "string",
+        "enum": [
+          "responsavel",
+          "beneficiario",
+          "doador"
+        ]
+      }
+    },
+    "responsavel_id": {
+      "type": "string",
+      "title": "ID do Respons\u00e1vel"
+    },
+    "status": {
+      "type": "string",
+      "title": "Status",
+      "enum": [
+        "ativo",
+        "com_pendencia",
+        "bloqueado"
+      ],
+      "default": "ativo"
+    },
+    "motivo_status": {
+      "type": "string",
+      "title": "Motivo do Status"
+    },
+    "clube_id": {
+      "type": "string",
+      "title": "ID do Clube"
+    },
+    "observacoes": {
+      "type": "string",
+      "title": "Observa\u00e7\u00f5es"
+    },
+    "documentos": {
+      "type": "array",
+      "title": "Documentos",
+      "items": {
+        "type": "object",
+        "properties": {
+          "tipo": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "pendente",
+              "aprovado",
+              "reprovado"
+            ]
+          },
+          "motivo": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "anotacoes": {
+      "type": "array",
+      "title": "Anota\u00e7\u00f5es",
+      "items": {
+        "type": "object",
+        "properties": {
+          "texto": {
+            "type": "string"
+          },
+          "usuario": {
+            "type": "string"
+          },
+          "data": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "nome"
+  ],
+  "name": "Pessoa"
+}

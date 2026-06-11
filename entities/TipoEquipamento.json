@@ -1,0 +1,52 @@
+{
+  "type": "object",
+  "properties": {
+    "nome": {
+      "type": "string",
+      "title": "Nome"
+    },
+    "descricao": {
+      "type": "string",
+      "title": "Descri\u00e7\u00e3o"
+    },
+    "atributos": {
+      "type": "array",
+      "title": "Atributos",
+      "items": {
+        "type": "object",
+        "properties": {
+          "nome": {
+            "type": "string"
+          },
+          "tipo": {
+            "type": "string",
+            "enum": [
+              "texto",
+              "numero",
+              "selecao"
+            ]
+          },
+          "opcoes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "icone": {
+      "type": "string",
+      "title": "\u00cdcone"
+    },
+    "ativo": {
+      "type": "boolean",
+      "title": "Ativo",
+      "default": true
+    }
+  },
+  "required": [
+    "nome"
+  ],
+  "name": "TipoEquipamento"
+}

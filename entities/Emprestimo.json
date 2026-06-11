@@ -1,0 +1,129 @@
+{
+  "type": "object",
+  "properties": {
+    "solicitacao_id": {
+      "type": "string",
+      "title": "Solicita\u00e7\u00e3o ID"
+    },
+    "equipamento_id": {
+      "type": "string",
+      "title": "Equipamento ID"
+    },
+    "equipamento_codigo": {
+      "type": "string",
+      "title": "C\u00f3digo do Equipamento"
+    },
+    "tipo_equipamento_nome": {
+      "type": "string",
+      "title": "Tipo de Equipamento"
+    },
+    "pessoa_id": {
+      "type": "string",
+      "title": "Pessoa ID"
+    },
+    "pessoa_nome": {
+      "type": "string",
+      "title": "Nome da Pessoa"
+    },
+    "beneficiario_id": {
+      "type": "string",
+      "title": "Benefici\u00e1rio ID"
+    },
+    "beneficiario_nome": {
+      "type": "string",
+      "title": "Nome do Benefici\u00e1rio"
+    },
+    "clube_id": {
+      "type": "string",
+      "title": "Clube ID"
+    },
+    "data_retirada": {
+      "type": "string",
+      "title": "Data de Retirada"
+    },
+    "data_prevista_devolucao": {
+      "type": "string",
+      "title": "Data Prevista de Devolu\u00e7\u00e3o"
+    },
+    "data_devolucao": {
+      "type": "string",
+      "title": "Data de Devolu\u00e7\u00e3o"
+    },
+    "status": {
+      "type": "string",
+      "title": "Status",
+      "enum": [
+        "ativo",
+        "vencendo",
+        "vencido",
+        "devolvido",
+        "comprado"
+      ],
+      "default": "ativo"
+    },
+    "renovacoes": {
+      "type": "number",
+      "title": "Renova\u00e7\u00f5es",
+      "default": 0
+    },
+    "foto_entrega": {
+      "type": "string",
+      "title": "Foto da Entrega"
+    },
+    "foto_devolucao": {
+      "type": "string",
+      "title": "Foto da Devolu\u00e7\u00e3o"
+    },
+    "estado_devolucao": {
+      "type": "string",
+      "title": "Estado na Devolu\u00e7\u00e3o",
+      "enum": [
+        "bom",
+        "regular",
+        "danificado",
+        "necessita_manutencao"
+      ]
+    },
+    "termo_aceite": {
+      "type": "boolean",
+      "title": "Termo de Aceite",
+      "default": false
+    },
+    "observacoes_entrega": {
+      "type": "string",
+      "title": "Observa\u00e7\u00f5es da Entrega"
+    },
+    "observacoes_devolucao": {
+      "type": "string",
+      "title": "Observa\u00e7\u00f5es da Devolu\u00e7\u00e3o"
+    },
+    "historico": {
+      "type": "array",
+      "title": "Hist\u00f3rico",
+      "items": {
+        "type": "object",
+        "properties": {
+          "acao": {
+            "type": "string"
+          },
+          "usuario": {
+            "type": "string"
+          },
+          "data": {
+            "type": "string"
+          },
+          "detalhes": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "equipamento_id",
+    "pessoa_id",
+    "data_retirada",
+    "data_prevista_devolucao"
+  ],
+  "name": "Emprestimo"
+}

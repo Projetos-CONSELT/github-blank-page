@@ -1,0 +1,55 @@
+{
+  "type": "object",
+  "properties": {
+    "nome": {
+      "type": "string",
+      "title": "Nome"
+    },
+    "cidade": {
+      "type": "string",
+      "title": "Cidade"
+    },
+    "estado": {
+      "type": "string",
+      "title": "Estado"
+    },
+    "endereco": {
+      "type": "string",
+      "title": "Endere\u00e7o"
+    },
+    "telefone": {
+      "type": "string",
+      "title": "Telefone"
+    },
+    "email": {
+      "type": "string",
+      "title": "E-mail"
+    },
+    "prazo_reserva_dias": {
+      "type": "number",
+      "title": "Prazo de Reserva (dias)",
+      "default": 7
+    },
+    "prazo_emprestimo_dias": {
+      "type": "number",
+      "title": "Prazo de Empr\u00e9stimo (dias)",
+      "default": 90
+    },
+    "limite_renovacoes": {
+      "type": "number",
+      "title": "Limite de Renova\u00e7\u00f5es",
+      "default": 3
+    },
+    "ativo": {
+      "type": "boolean",
+      "title": "Ativo",
+      "default": true
+    }
+  },
+  "required": [
+    "nome",
+    "cidade",
+    "estado"
+  ],
+  "name": "Clube"
+}

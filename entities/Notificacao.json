@@ -1,0 +1,63 @@
+{
+  "type": "object",
+  "properties": {
+    "tipo": {
+      "type": "string",
+      "title": "Tipo",
+      "enum": [
+        "confirmacao",
+        "pendencia",
+        "reserva",
+        "vencimento",
+        "devolucao",
+        "bloqueio"
+      ]
+    },
+    "destinatario_id": {
+      "type": "string",
+      "title": "Destinat\u00e1rio ID"
+    },
+    "destinatario_contato": {
+      "type": "string",
+      "title": "Contato do Destinat\u00e1rio"
+    },
+    "canal": {
+      "type": "string",
+      "title": "Canal",
+      "enum": [
+        "email",
+        "whatsapp",
+        "sms",
+        "sistema"
+      ]
+    },
+    "titulo": {
+      "type": "string",
+      "title": "T\u00edtulo"
+    },
+    "mensagem": {
+      "type": "string",
+      "title": "Mensagem"
+    },
+    "status": {
+      "type": "string",
+      "title": "Status",
+      "enum": [
+        "pendente",
+        "enviado",
+        "falhou"
+      ],
+      "default": "pendente"
+    },
+    "referencia_tipo": {
+      "type": "string",
+      "title": "Tipo de Refer\u00eancia"
+    },
+    "referencia_id": {
+      "type": "string",
+      "title": "ID da Refer\u00eancia"
+    }
+  },
+  "name": "Notificacao",
+  "required": []
+}
